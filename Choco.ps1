@@ -1,12 +1,13 @@
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit }
 
 # Choco Packages
-$EssentialPackages = @("7zip.install", "vlc", "microsoft-windows-terminal", "bitwarden")
+$EssentialPackages = @("7zip.install", "vlc", "microsoft-windows-terminal", "powertoys", "bitwarden", 
+            "nextcloud-client", "sharpkeys", "sharex", "divvy", "ueli")
 $DevelopmentPackages = @("visualstudio2019community", "vscode", "jetbrainstoolbox", "github-desktop",
-            "postman", "docker-cli", "powerbi", "microsoft-r-open", "r.studio")
+            "postman", "docker-cli", "powerbi", "microsoft-r-open", "r.studio", "git-fork", "dotnetcore-sdk")
 $BrowserPackages = @("microsoft-edge", "googlechrome", "firefox")
-$ITToolPackages = @("filezilla", "teamviewer", "wireshark")
-$OfficePackages = @("typora")
+$ITToolPackages = @("filezilla", "teamviewer", "wireshark", "ccleaner")
+$OfficePackages = @("typora", "office365homepremium", "pandoc")
 $MessengerPackages = @("discord", "telegram", "whatsapp")
 
 # Strings
